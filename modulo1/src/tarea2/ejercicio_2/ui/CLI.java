@@ -1,4 +1,4 @@
-package tarea2.ui;
+package tarea2.ejercicio_2.ui;
 
 public class CLI {
     public static void launchApp() {
