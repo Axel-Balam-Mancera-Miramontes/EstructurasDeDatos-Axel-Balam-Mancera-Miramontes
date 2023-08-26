@@ -4,7 +4,7 @@ import java.util.Optional;
 /**
  * Interfaz base para la implementación de listas enlazadas
  * */
-public interface Lista <E>{
+public interface iList<E>{
     void add(E e);
     void remove(E e);
     Optional<E> get(int index);

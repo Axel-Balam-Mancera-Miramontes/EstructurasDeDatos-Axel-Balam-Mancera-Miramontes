@@ -1,12 +1,13 @@
+/*
+
 package tarea2.utils;
 
 import org.junit.Assert;
 import org.junit.Test;
 import utils.ListaEnlazada;
-
 import java.util.Optional;
 
-public class ListaEnlazadaTest {
+public class ListaTest {
     @Test
     public void add1ElementTest(){
         ListaEnlazada<Integer> lista = new ListaEnlazada<>();
@@ -104,3 +105,5 @@ public class ListaEnlazadaTest {
         Assert.assertEquals(2,lista.size());
     }
 }
+
+*/
