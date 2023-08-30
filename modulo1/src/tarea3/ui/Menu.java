@@ -16,7 +16,7 @@ public class Menu {
      * Texts that may appear when interacting with the menu.
      */
     private String MENU_WELCOME = "Menú";
-    private String REQUEST_OPTION = "Digite el número correspondiente a la opción a elegir: ";
+    private String REQUEST_OPTION = "Digite el número correspondiente a la opción a elegir:\n";
     private String NUMERIC_TYPE_ERROR = "El valor ingresado no posee un formato numérico. Intente de nuevo: ";
     private String OUT_OF_RANGE_ERROR = "Opción no disponible. Intente de nuevo: ";
     private String END_OF_PROGRAM = "Programa finalizado.";

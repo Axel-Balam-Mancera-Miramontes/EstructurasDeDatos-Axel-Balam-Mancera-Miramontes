@@ -1,5 +1,6 @@
 package tarea3;
 
+import tarea3.ui.*;
 import tarea3.utils.*;
 
 public class Main {
@@ -34,6 +35,6 @@ public class Main {
         }
         System.out.println();
 
-        //CLI.launchApp();
+        CLI.launchApp();
     }
 }

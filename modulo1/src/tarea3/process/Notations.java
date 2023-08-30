@@ -14,19 +14,19 @@ public class Notations {
                 stack.push(c);
             } else if (c == ')') {
                 while (stack.peek().get() != '(') {
-                    postfix += stack.pop();
+                    postfix += stack.pop().get();
                 }
                 stack.pop();
             } else {
                 while (!stack.isEmpty() && precedence(stack.peek().get()) >= precedence(c)) {
-                    postfix += stack.pop();
+                    postfix += stack.pop().get();
                 }
                 stack.push(c);
             }
         }
 
         while (!stack.isEmpty()) {
-            postfix += stack.pop();
+            postfix += stack.pop().get();
         }
 
         return postfix;
