@@ -14,7 +14,7 @@ public class Pila <E>{
     }
 
     public Optional<E> peek(){
-        return stack.get(stack.getSize() - 1);
+        return stack.get(0);
     }
 
     public Optional<E> pop(){
@@ -34,7 +34,7 @@ public class Pila <E>{
     public Pila<E> inverse() {
         Pila<E> inversed = new Pila<>();
 
-        for(int i = stack.getSize() - 1; i >= 0; --i){
+        for(int i = 0; i < stack.getSize(); ++i){
             inversed.push(stack.get(i).get());
         }
 
@@ -42,20 +42,18 @@ public class Pila <E>{
     }
 
     public Pila<E> alternate(Pila<E> stackB){
-        Pila<E> stackB2 = stackB.inverse();
         Pila<E> alternated = new Pila<>();
 
-
-        /*
-        while(stack.getSize() > 0 || stackB2.getSize() > 0){
+        for(int i = 0; i < Math.max(stack.getSize(), stackB.getSize()); ++i){
             try{
-
+                alternated.push(stackB.stack.get(stack.getSize() - i - 1).get());
             }
-            catch{
-
+            catch(IndexOutOfBoundsException e){}
+            try{
+                alternated.push(stack.get(stack.getSize() - i - 1).get());
             }
+            catch(IndexOutOfBoundsException e){}
         }
-        */
 
         return alternated;
     }
