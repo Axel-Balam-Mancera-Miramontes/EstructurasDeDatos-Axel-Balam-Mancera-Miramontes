@@ -13,23 +13,21 @@ public class Main {
         stack.push(3);
         stack.push(4);
         stack.push(5);
-
-        stackB.push(25);
-        stackB.push(35);
-        stackB.push(45);
-
-        aux = stack.alternate(stackB);
-
+        stack = stack.inverse();
         while(!stack.isEmpty()){
             System.out.print(stack.pop().get() + " ");
         }
         System.out.println();
 
+        stackB.push(25);
+        stackB.push(35);
+        stackB.push(45);
         while(!stackB.isEmpty()){
             System.out.print(stackB.pop().get() + " ");
         }
         System.out.println();
 
+        aux = stack.alternate(stackB);
         while(!aux.isEmpty()){
             System.out.print(aux.pop().get() + " ");
         }

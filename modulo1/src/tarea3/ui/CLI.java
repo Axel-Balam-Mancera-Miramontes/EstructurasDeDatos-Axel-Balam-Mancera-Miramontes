@@ -5,6 +5,7 @@
 package tarea3.ui;
 
 import tarea3.process.Notations;
+import tarea3.utils.Pila;
 
 import java.util.Scanner;
 
@@ -33,7 +34,7 @@ public class CLI {
     private static String INPUT_INFIX_EXPRESSION = "Ingrese una expresión matemática en notación infija:";
     private static String OUTPUT_INFIX = "La expresión matemática en notación infija ingresada es: %s\n";
     private static String OUTPUT_POSTFIX = "La expresión equivalente en notación postfija es: %s\n";
-    private static String ANS = "El resultado de evaluar la expresión dada es: %d";
+    private static String ANS = "El resultado de evaluar la expresión dada es: %d\n";
 
     /**
      * Menu actions.
@@ -42,20 +43,22 @@ public class CLI {
      * Defines the action that adds the capitains into a list.
      */
     private static MenuActionPrototype infixToPostfix = () -> {
-        String infix = new String();
-        String postfix = new String();
+        String strExpression;
+        Pila<String> stackExpression;
         int ans;
         Scanner input = new Scanner(System.in);
 
         System.out.println(INPUT_INFIX_EXPRESSION);
-        infix = input.next();
+        strExpression = input.next();
+        stackExpression = Notations.strToStack(strExpression);
+        System.out.printf(OUTPUT_INFIX, strExpression);
 
-        System.out.printf(OUTPUT_INFIX, infix);
+        strExpression = Notations.strInfixToPostfix(strExpression);
+        stackExpression = Notations.stackInfixToPostfix(stackExpression);
+        System.out.printf(OUTPUT_POSTFIX, strExpression);
 
-        postfix = Notations.infixToPostfix(infix);
-        System.out.printf(OUTPUT_POSTFIX, postfix);
-        //System.out.printf(ANS, ans);
-
+        ans = Notations.evaluatePostfixExpression(stackExpression);
+        System.out.printf(ANS, ans);
     };
 
     /**
