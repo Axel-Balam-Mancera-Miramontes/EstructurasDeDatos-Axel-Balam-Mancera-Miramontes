@@ -1,3 +1,7 @@
+/**
+ * @author Axel Balam Mancera Miramontes
+ */
+
 package tarea3;
 
 import tarea3.ui.*;
