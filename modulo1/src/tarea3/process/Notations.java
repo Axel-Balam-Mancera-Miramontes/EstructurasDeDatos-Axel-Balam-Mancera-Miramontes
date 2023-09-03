@@ -157,7 +157,7 @@ public class Notations {
             if (element.equals("+") || element.equals("-") || element.equals("*") || element.equals("/")) {
                 double operand2 = ans.pop().get();
                 double operand1 = ans.pop().get();
-                double result = performOperation(operand1, operand2, element);
+                double result = performOperation(operand2, operand1, element);
                 ans.push(result);
             } else {
                 ans.push(Double.parseDouble(element));

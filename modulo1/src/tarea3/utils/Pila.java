@@ -2,7 +2,6 @@
  * @author Axel Balam Mancera Miramontes
  */
 
-
 package tarea3.utils;
 
 import java.util.Optional;
