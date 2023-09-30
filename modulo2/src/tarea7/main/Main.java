@@ -1,4 +1,4 @@
-package tarea4.main;
+package tarea7.main;
 
 import tarea7.ui.CLI;
 
