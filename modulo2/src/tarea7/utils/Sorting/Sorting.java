@@ -4,6 +4,11 @@ package tarea7.utils.Sorting;
 import java.util.Arrays;
 import java.util.Random;
 
+import static tarea7.utils.Sorting.Bubble.*;
+import static tarea7.utils.Sorting.Insertion.*;
+import static tarea7.utils.Sorting.Selection.*;
+import static tarea7.utils.Sorting.Shell.*;
+
 public class Sorting {
     public static int COMPARACIONES = 0;
     public static int MOVIMIENTOS = 0;
