@@ -4,14 +4,6 @@ package tarea8.utils.Sorting;
 import java.util.Arrays;
 import java.util.Random;
 
-import static tarea8.utils.Sorting.Bubble.*;
-import static tarea8.utils.Sorting.Heap.*;
-import static tarea8.utils.Sorting.Insertion.*;
-import static tarea8.utils.Sorting.Merge.*;
-import static tarea8.utils.Sorting.Quick.*;
-import static tarea8.utils.Sorting.Selection.*;
-import static tarea8.utils.Sorting.Shell.*;
-
 public class Sorting {
     public static int COMPARACIONES = 0;
     public static int MOVIMIENTOS = 0;
@@ -27,7 +19,7 @@ public class Sorting {
             MOVIMIENTOS = 0;
             for (int i = 0; i < ITERACIONES; i++) {
                 int[] array = getRandomArray(N, Short.MIN_VALUE, Integer.MAX_VALUE);
-                Bubble.bubbleSort(array);
+                //Bubble.bubbleSort(array);
                 //Heap.heapSort(array);
                 //Insertion.insertionSort(array);
                 //Merge.mergeSort(array);
