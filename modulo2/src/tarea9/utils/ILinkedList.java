@@ -1,18 +1,11 @@
-<<<<<<< HEAD
-=======
-/**
- * @author Axel Balam Mancera Miramontes
- */
+package tarea9.utils;
 
-
->>>>>>> origin/master
-package tarea3.utils;
 import java.util.Optional;
 
 /**
  * Interfaz base para la implementación de listas enlazadas
  * */
-public interface IListaEnlazada<E>{
+public interface ILinkedList<E>{
     void add(E e);
     void remove(E e);
     Optional<E> get(int index);

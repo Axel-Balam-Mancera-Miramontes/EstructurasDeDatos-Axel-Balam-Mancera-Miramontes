@@ -1,12 +1,5 @@
-<<<<<<< HEAD
-=======
-/**
- * @author Axel Balam Mancera Miramontes
- */
+package tarea8.utils;
 
-
->>>>>>> origin/master
-package tarea3.utils;
 import java.util.Optional;
 
 /**

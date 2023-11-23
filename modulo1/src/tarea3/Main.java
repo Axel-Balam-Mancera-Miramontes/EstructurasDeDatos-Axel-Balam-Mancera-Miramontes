@@ -1,9 +1,20 @@
+<<<<<<< HEAD
 package tarea3;
 
+=======
+/**
+ * @author Axel Balam Mancera Miramontes
+ */
+
+package tarea3;
+
+import tarea3.ui.*;
+>>>>>>> origin/master
 import tarea3.utils.*;
 
 public class Main {
     public static void main(String[] args) {
+<<<<<<< HEAD
         Pila<Integer> stack = new Pila<>();
         Pila<Integer> stackB = new Pila<>();
 
@@ -17,5 +28,8 @@ public class Main {
         }
 
         //CLI.launchApp();
+=======
+        CLI.launchApp();
+>>>>>>> origin/master
     }
 }
