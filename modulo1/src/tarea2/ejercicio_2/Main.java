@@ -1,6 +1,6 @@
-package tarea4.main;
+package tarea2.ejercicio_2;
 
-import tarea7.ui.CLI;
+import tarea2.ejercicio_2.ui.CLI;
 
 public class Main {
     public static void main(String[] args) {
