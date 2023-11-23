@@ -1,10 +1,10 @@
-/*
-
-package tarea2.utils;
+/**
+ * @author Axel Balam Mancera Miramontes
+ */
 
 import org.junit.Assert;
 import org.junit.Test;
-import utils.ListaEnlazada;
+import tarea3.utils.ListaEnlazada;
 import java.util.Optional;
 
 public class ListaTest {
@@ -13,7 +13,7 @@ public class ListaTest {
         ListaEnlazada<Integer> lista = new ListaEnlazada<>();
         lista.add(5);
         Assert.assertEquals(Optional.of(5),lista.get(0));
-        Assert.assertEquals(1,lista.size());
+        Assert.assertEquals(1,lista.getSize());
     }
     @Test
     public void add2Element2Test(){
@@ -22,21 +22,21 @@ public class ListaTest {
         lista.add(78);
         Assert.assertEquals(Optional.of(5),lista.get(0));
         Assert.assertEquals(Optional.of(78),lista.get(1));
-        Assert.assertEquals(2,lista.size());
+        Assert.assertEquals(2,lista.getSize());
     }
     @Test
     public void getNegativeIndexTest(){
         ListaEnlazada<Integer> lista = new ListaEnlazada<>();
         lista.add(5);
         Assert.assertThrows(IndexOutOfBoundsException.class,()->lista.get(-1));
-        Assert.assertEquals(1,lista.size());
+        Assert.assertEquals(1,lista.getSize());
     }
     @Test
     public void getIndexOutOfBoundsTest(){
         ListaEnlazada<Integer> lista = new ListaEnlazada<>();
         lista.add(5);
         Assert.assertThrows(IndexOutOfBoundsException.class,()->lista.get(1));
-        Assert.assertEquals(1,lista.size());
+        Assert.assertEquals(1,lista.getSize());
     }
     @Test
     public void containsElementsTest(){
@@ -45,7 +45,7 @@ public class ListaTest {
         lista.add(78);
         Assert.assertTrue(lista.contains(78));
         Assert.assertTrue(lista.contains(5));
-        Assert.assertEquals(2,lista.size());
+        Assert.assertEquals(2,lista.getSize());
     }
     @Test
     public void containsNotPResentElementsTest(){
@@ -66,7 +66,7 @@ public class ListaTest {
     public void removeEmptyTest(){
         ListaEnlazada<Integer> lista = new ListaEnlazada<>();
         lista.remove(5);
-        Assert.assertEquals(0,lista.size());
+        Assert.assertEquals(0,lista.getSize());
     }
     @Test
     public void removeRootTest(){
@@ -78,7 +78,7 @@ public class ListaTest {
         Assert.assertTrue(lista.contains(78));
         Assert.assertTrue(lista.contains(105));
         Assert.assertFalse(lista.contains(5));
-        Assert.assertEquals(2,lista.size());
+        Assert.assertEquals(2,lista.getSize());
     }
     @Test
     public void removeMiddleTest(){
@@ -90,7 +90,7 @@ public class ListaTest {
         Assert.assertTrue(lista.contains(5));
         Assert.assertTrue(lista.contains(105));
         Assert.assertFalse(lista.contains(78));
-        Assert.assertEquals(2,lista.size());
+        Assert.assertEquals(2,lista.getSize());
     }
     @Test
     public void removeLastTest(){
@@ -102,8 +102,7 @@ public class ListaTest {
         Assert.assertTrue(lista.contains(5));
         Assert.assertTrue(lista.contains(78));
         Assert.assertFalse(lista.contains(105));
-        Assert.assertEquals(2,lista.size());
+        Assert.assertEquals(2,lista.getSize());
     }
 }
 
-*/
